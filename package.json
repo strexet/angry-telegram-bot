@@ -1,0 +1,29 @@
+{
+  "name": "rivetelegrambot",
+  "version": "1.0.0",
+  "description": "Bot for telegram using rivescript for bot brains.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strexet/rivetelegrambot.git"
+  },
+  "keywords": [
+    "telegram",
+    "rivescript",
+    "bot"
+  ],
+  "author": "strexet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strexet/rivetelegrambot/issues"
+  },
+  "homepage": "https://github.com/strexet/rivetelegrambot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
+    "rivescript": "^1.18.0"
+  }
+}
