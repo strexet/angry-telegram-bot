@@ -13,6 +13,8 @@ const telegram = new TelegramBot(token, {polling: true});
 const riveBot = new RiveScript({utf8: true});
 const punctuation = new RegExp(/[.,!;:]/g);
 
+const PleaseNoWRU = "PleaseNoWRU:";
+
 riveBot.loadDirectory("brain", loading_done, loading_error);
 
 function loading_done (batch_num) {
@@ -379,6 +381,10 @@ function strToWru(str) {
 }
 
 function WruToStr(wru) {
+  if (wru.indexOf(PleaseNoWRU) == 0) {
+    return wru.replace(PleaseNoWRU, '');
+  }
+
   let normalWords = [];
   let WRUwords = wru.trim().split(/\s/);
   for (let i = 0; i < WRUwords.length; i++) {
