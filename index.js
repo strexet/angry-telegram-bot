@@ -48,7 +48,7 @@ function sendResponse(msg) {
 
     setTimeout(function() {
         // Wait on the promise:
-        riveBot.reply(user, msg).then(function(outputWRU) {
+        riveBot.reply(user, inputWRU).then(function(outputWRU) {
             let outpuText = WRU.WruToStr(outputWRU);
 
             console.log('Bot> ' + outpuText);
