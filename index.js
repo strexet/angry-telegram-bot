@@ -27,16 +27,42 @@ const punctuation = new RegExp(/[.,!;:]/g);
 
 const PleaseNoWRU = "PleaseNoWRU:";
 
-riveBot.loadDirectory("brain", loading_done, loading_error);
-
 riveBot.loadDirectory("brain")
     .then(loading_done)
     .catch(loading_error);
 
 function loading_done() {
     console.log("Has finished loading brain!");
+
     // Now the replies must be sorted!
     riveBot.sortReplies();
+
+    sendResponse();
+}
+
+function sendResponse() {
+    const chatId = getChatId(msg);
+    const userId = 'user_' + chatId;
+
+    let inputText = getMessageString(msg);
+
+    let inputWRU = WRU.strToWru(inputText);
+
+    console.log(addTimeStampTo('You(' + userId + ')> ') + inputText);
+
+    console.log('\tWRU> ' + inputWRU);
+
+    setTimeout(function() {
+        // Wait on the promise:
+        riveBot.reply(user, message).then(function(outputWRU) {
+            let outpuText = WRU.WruToStr(outputWRU);
+
+            console.log('Bot> ' + outpuText);
+            console.log('\tWRU> ' + outputWRU);
+
+            sendMessageToTelegram(msg, outpuText, 10);
+        });
+    }, 500);
 }
 
 function loading_error(err, filename, lineno) {
@@ -410,27 +436,4 @@ function recieveMessage(msg) {
     riveBot.loadDirectory(["brain"])
         .then(loading_done)
         .catch(loading_error);
-
-    const chatId = getChatId(msg);
-    const userId = 'user_' + chatId;
-
-    let inputText = getMessageString(msg);
-
-    let inputWRU = WRU.strToWru(inputText);
-
-    console.log(addTimeStampTo('You> ') + inputText);
-
-    console.log('\tWRU> ' + inputWRU);
-
-    setTimeout(function() {
-        // Wait on the promise:
-        riveBot.reply(user, message).then(function(outputWRU) {
-            let outpuText = WRU.WruToStr(outputWRU);
-
-            console.log('Bot> ' + outpuText);
-            console.log('\tWRU> ' + outputWRU);
-
-            sendMessageToTelegram(msg, outpuText, 10);
-        });
-    }, 500);
 }
