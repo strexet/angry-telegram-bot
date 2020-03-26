@@ -31,16 +31,16 @@ riveBot.loadDirectory("brain")
     .then(loading_done)
     .catch(loading_error);
 
-function loading_done() {
+function loading_done(msg) {
     console.log("Has finished loading brain!");
 
     // Now the replies must be sorted!
     riveBot.sortReplies();
 
-    sendResponse();
+    sendResponse(msg);
 }
 
-function sendResponse() {
+function sendResponse(msg) {
     const chatId = getChatId(msg);
     const userId = 'user_' + chatId;
 
@@ -434,6 +434,6 @@ function recieveMessage(msg) {
     }
 
     riveBot.loadDirectory(["brain"])
-        .then(loading_done)
+        .then(function() { loading_done(msg); })
         .catch(loading_error);
 }
