@@ -27,8 +27,6 @@ const punctuation = new RegExp(/[.,!;:]/g);
 
 const PleaseNoWRU = "PleaseNoWRU:";
 
-const BrainPath = "./brain";
-
 function loading_done(msg) {
     console.log("Has finished loading brain!");
 
