@@ -29,6 +29,10 @@ const PleaseNoWRU = "PleaseNoWRU:";
 
 riveBot.loadDirectory("brain", loading_done, loading_error);
 
+riveBot.loadDirectory("brain")
+    .then(loading_done)
+    .catch(loading_error);
+
 function loading_done() {
     console.log("Has finished loading brain!");
     // Now the replies must be sorted!
@@ -403,7 +407,7 @@ function recieveMessage(msg) {
         return;
     }
 
-    riveBot.loadDirectory(["brain/newDialogs.rive", "brain/newResps.rive", "brain/newSubs.rive"])
+    riveBot.loadDirectory(["brain"])
         .then(loading_done)
         .catch(loading_error);
 
