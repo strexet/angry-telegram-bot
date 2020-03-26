@@ -27,6 +27,8 @@ const punctuation = new RegExp(/[.,!;:]/g);
 
 const PleaseNoWRU = "PleaseNoWRU:";
 
+const BrainPath = "./brain";
+
 function loading_done(msg) {
     console.log("Has finished loading brain!");
 
@@ -429,7 +431,7 @@ function recieveMessage(msg) {
         return;
     }
 
-    riveBot.loadDirectory(["brain"])
+    riveBot.loadDirectory("brain/")
         .then(function() { loading_done(msg); })
         .catch(loading_error);
 }
