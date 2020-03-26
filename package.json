@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/strexet/rivetelegrambot#readme",
   "dependencies": {
-    "node-telegram-bot-api": "^0.30.0",
-    "rivescript": "^1.19.0"
+    "node-telegram-bot-api": ">0.30.0",
+    "rivescript": ">1.19.0"
   },
   "devDependencies": {}
 }

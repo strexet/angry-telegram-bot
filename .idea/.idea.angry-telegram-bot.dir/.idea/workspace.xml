@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:heroku" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tools/telegram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/WRU.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/WRU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/doc/tutorials.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/doc/tutorials.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/doc/usage.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/doc/usage.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/lib/telegram.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/lib/telegram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/src/telegram.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-telegram-bot-api/src/telegram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/Changes.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/Changes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/dist/rivescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/dist/rivescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/dist/rivescript.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/dist/rivescript.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/brain.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/brain.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/html/brain.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/html/brain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/html/lang.coffee.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/html/lang.coffee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/html/lang.javascript.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/html/lang.javascript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/html/parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/html/parser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/html/rivescript.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/html/rivescript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/html/utils.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/html/utils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/lang.coffee.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/lang.coffee.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/lang.javascript.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/lang.javascript.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/parser.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/parser.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/rivescript.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/rivescript.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/docs/utils.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/docs/utils.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/brain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/inheritance.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/inheritance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/lang/coffee.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/lang/coffee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/lang/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/lang/javascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/rivescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/rivescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/sorting.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/sorting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rivescript/rivescript.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rivescript/rivescript.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/es6/rsvp.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/es6/rsvp.es.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/rsvp.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/rsvp.es.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/rsvp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/rsvp.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/rsvp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/dist/rsvp.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/-internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/all-settled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/asap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/defer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/enumerator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/hash-settled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/hash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/instrument.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/platform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/promise-hash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/promise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/promise/all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/promise/race.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/promise/reject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/promise/resolve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/race.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/reject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/resolve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/rethrow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/then.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/lib/rsvp/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rsvp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Tools/telegram.js" />
+        <option value="$PROJECT_DIR$/Tools/WRU.js" />
+        <option value="$PROJECT_DIR$/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1ZI6mjg2Y3jF2nCIKxpHmLCHzMr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="C:\Users\strex\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\201.6073.104\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="" />
+      <created>1584514421679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584514421679</updated>
+      <workItem from="1584514426351" duration="142000" />
+      <workItem from="1584529391931" duration="1355000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584529497077">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1584529497077" />
+    <state x="580" y="140" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1584529458068">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="580" y="140" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.870@0.0.1600.870" timestamp="1584529458068" />
+    <state width="1557" height="328" key="GridCell.Tab.0.bottom" timestamp="1584530748121">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1557" height="328" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1584530748121" />
+    <state width="1557" height="328" key="GridCell.Tab.0.center" timestamp="1584530748121">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1557" height="328" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1584530748121" />
+    <state width="1557" height="328" key="GridCell.Tab.0.left" timestamp="1584530748121">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1557" height="328" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1584530748121" />
+    <state width="1557" height="328" key="GridCell.Tab.0.right" timestamp="1584530748121">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1557" height="328" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1584530748121" />
+  </component>
+</project>
