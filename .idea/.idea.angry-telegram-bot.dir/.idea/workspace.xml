@@ -25,8 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/WRU.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/WRU.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +51,9 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Tools/telegram.js" />
-        <option value="$PROJECT_DIR$/Tools/WRU.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Tools/WRU.js" />
       </list>
     </option>
   </component>
@@ -103,6 +102,7 @@
       <workItem from="1584514426351" duration="142000" />
       <workItem from="1584529391931" duration="1355000" />
       <workItem from="1585210712072" duration="113000" />
+      <workItem from="1585218203775" duration="395000" />
     </task>
     <servers />
   </component>

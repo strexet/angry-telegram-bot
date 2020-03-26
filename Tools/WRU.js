@@ -163,7 +163,7 @@ WRU.prototype.strToWru = function(str) {
             }
         }
 
-        let WRUword = charArr.join(delimiter);
+        let WRUword = charArr.join(this.delimiter);
 
         WRUarr.push(WRUword);
     }
