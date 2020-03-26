@@ -27,10 +27,6 @@ const punctuation = new RegExp(/[.,!;:]/g);
 
 const PleaseNoWRU = "PleaseNoWRU:";
 
-riveBot.loadDirectory("brain")
-    .then(loading_done)
-    .catch(loading_error);
-
 function loading_done(msg) {
     console.log("Has finished loading brain!");
 
