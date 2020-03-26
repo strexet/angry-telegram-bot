@@ -44,15 +44,12 @@ function sendResponse(msg) {
 
     console.log(addTimeStampTo('You(' + user + ')> ') + inputText);
 
-    console.log('\tWRU> ' + inputWRU);
-
     setTimeout(function() {
         // Wait on the promise:
         riveBot.reply(user, inputWRU).then(function(outputWRU) {
             let outpuText = WRU.WruToStr(outputWRU);
 
             console.log('Bot> ' + outpuText);
-            console.log('\tWRU> ' + outputWRU);
 
             sendMessageToTelegram(msg, outpuText, 10);
         });
@@ -433,15 +430,22 @@ function recieveMessage(msg) {
 }
 
 const BeginRive = "brain/begin.rive";
+const StarRive = "brain/star.rive";
 const NewDialogsRive = "brain/newDialogs.rive";
 const NewRespsRive = "brain/newResps.rive";
 const NewSubsRive = "brain/newSubs.rive";
-const NewStarRive = "brain/star.rive";
 
 function loadBrains(msg) {
-    riveBot.loadFile([BeginRive, NewDialogsRive, NewRespsRive, NewSubsRive, NewStarRive])
+    riveBot.loadFile([BeginRive, NewDialogsRive, NewRespsRive, NewSubsRive, StarRive])
         .then(function() {
-            console.log("Has finished loading ./brain!");
+            console.log("Has finished loading all brain!");
+        })
+        .catch(loading_error);
+}
+
+function loadBrainBeforeMessage(msg) {
+    riveBot.loadFile([NewDialogsRive, NewRespsRive, NewSubsRive])
+        .then(function() {
             loading_done(msg)
         })
         .catch(loading_error);
