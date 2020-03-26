@@ -151,7 +151,7 @@ WRU.prototype.strToWru = function(str) {
   for (let i = 0; i < wordArr.length; i++) {
     let charArr = wordArr[i].split('');
 
-    if (charArr[charArr.length - 1] == '?') {
+    if (charArr[charArr.length - 1] === '?') {
       isQuestion = true;
       charArr.length = charArr.length - 1;
     }
@@ -175,6 +175,9 @@ WRU.prototype.strToWru = function(str) {
   return result;
 }
 
+/**
+ * @return {string}
+ */
 WRU.prototype.WruToStr = function(wru) {
   let normalWords = [];
   let WRUwords = wru.trim().split(/\s/);

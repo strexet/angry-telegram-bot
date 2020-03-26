@@ -1,15 +1,3 @@
-const http = require('http');
-const port = process.env.PORT;
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('StrexetBot\n');
-});
-
-server.listen(port);
-
-
 const TelegramBot = require('node-telegram-bot-api');
 const RiveScript = require("rivescript");
 const fs = require("fs");
@@ -150,7 +138,6 @@ function onAddMeaning(msg) {
 }
 
 
-
 telegram.onText(command_start, msg => {
     let startMessage = "Добавляй ответы на реплики для бота, объясняй значения неизвестных боту слов.\nИ просто общайся с ботом";
 
@@ -220,7 +207,6 @@ telegram.onText(command_addMeaning, (msg) => {
 });
 
 
-
 function processWord(msg) {
     wordForMeaning = getMessageString(msg);
 
@@ -233,7 +219,7 @@ function processMeaning(msg) {
     const meaning = getMessageString(msg);
 
     let newSub = '\n// ' + wordForMeaning + ' = ' + meaning + '\n' +
-        '! sub ' + strToWru(wordForMeaning) + ' = ' + strToWru(meaning) + '\n';
+        '! sub ' + WRU.strToWru(wordForMeaning) + ' = ' + WRU.strToWru(meaning) + '\n';
 
     fs.appendFileSync("brain/newSubs.rive", newSub, "UTF-8", { 'flags': 'a' });
 
@@ -256,7 +242,7 @@ function processAnswer(msg) {
     const resp = 'Отклик добавлен!';
 
     let newResp = '\n// ' + questionToAnswer + '\n' +
-        '+ ' + replaceSpacesWithOptionalStars(strToWru(questionToAnswer)) + '\n' +
+        '+ ' + replaceSpacesWithOptionalStars(WRU.strToWru(questionToAnswer)) + '\n' +
         '- ' + answer + '\n';
 
     fs.appendFileSync("brain/newResps.rive", newResp, "UTF-8", { 'flags': 'a' });
@@ -267,16 +253,16 @@ function processAnswer(msg) {
 function processDialog(msg) {
     let newDialog = '\n\n\n// + ' + dialogInput[0] + '\n' +
         '// - ' + dialogOutput[0] + '\n' +
-        '+ ' + strToWru(dialogInput[0]) + '\n' +
-        '- ' + strToWru(dialogOutput[0]) + '\n';
+        '+ ' + WRU.strToWru(dialogInput[0]) + '\n' +
+        '- ' + WRU.strToWru(dialogOutput[0]) + '\n';
 
     // for (let i = 1; i < dialogInput.length; i++) {
     //   newDialog = newDialog + '\n// + ' + dialogInput[i] + '\n'
     //                           + '// % ' + dialogOutput[i-1] + '\n'
     //                           + '// - ' + dialogOutput[i] + '\n'
-    //                           + '+ ' + strToWru(dialogInput[i]) + '\n'
-    //                           + '% ' + strToWru(dialogOutput[i-1]) + '\n'
-    //                           + '- ' + strToWru(dialogOutput[i]) + '\n';
+    //                           + '+ ' + WRU.strToWru(dialogInput[i]) + '\n'
+    //                           + '% ' + WRU.strToWru(dialogOutput[i-1]) + '\n'
+    //                           + '- ' + WRU.strToWru(dialogOutput[i]) + '\n';
     // }
 
     console.log(newDialog);
@@ -359,203 +345,6 @@ function replaceSpacesWithOptionalStars(string) {
     return result;
 }
 
-function strToWru(str) {
-    let WRUarr = [];
-    let wordArr = str.trim().split(/\s/);
-    let isQuestion = false;
-
-    for (let i = 0; i < wordArr.length; i++) {
-        let charArr = wordArr[i].split('');
-
-        if (charArr[charArr.length - 1] == '?') {
-            isQuestion = true;
-            charArr.length = charArr.length - 1;
-        }
-
-        for (let j = 0; j < charArr.length; j++) {
-            if (charArr[j] in toWRU) {
-                charArr[j] = toWRU[charArr[j]];
-            }
-        }
-
-        let WRUword = charArr.join(delimiter);
-
-        WRUarr.push(WRUword);
-    }
-
-    let result = WRUarr.join(' ');
-    if (isQuestion) {
-        result += ' questionmark';
-    }
-
-    return result;
-}
-
-function WruToStr(wru) {
-    if (wru.indexOf(PleaseNoWRU) == 0) {
-        return wru.replace(PleaseNoWRU, '');
-    }
-
-    let normalWords = [];
-    let WRUwords = wru.trim().split(/\s/);
-    for (let i = 0; i < WRUwords.length; i++) {
-        let charArr = WRUwords[i].split(delimiter);
-
-        for (let j = 0; j < charArr.length; j++) {
-            if (charArr[j] in fromWRU) {
-                charArr[j] = fromWRU[charArr[j]];
-            }
-        }
-
-        let normalWord = charArr.join('');
-        normalWords.push(normalWord);
-    }
-
-    return normalWords.join(' ');
-}
-
-const delimiter = 'w';
-
-const toWRU = {
-    "а": "a",
-    "б": "b",
-    "в": "v",
-    "г": "g",
-    "д": "d",
-    "е": "e",
-    "ё": "io",
-    "ж": "j",
-    "з": "z",
-    "и": "i",
-    "й": "ii",
-    "к": "k",
-    "л": "l",
-    "м": "m",
-    "н": "n",
-    "о": "o",
-    "п": "p",
-    "р": "r",
-    "с": "s",
-    "т": "t",
-    "у": "u",
-    "ф": "f",
-    "х": "h",
-    "ц": "c",
-    "ч": "ch",
-    "ш": "sh",
-    "щ": "shch",
-    "ъ": "ie",
-    "ы": "y",
-    "ь": "ng",
-    "э": "ne",
-    "ю": "iu",
-    "я": "ia",
-
-    "А": "A",
-    "Б": "B",
-    "В": "V",
-    "Г": "G",
-    "Д": "D",
-    "Е": "E",
-    "Ё": "IO",
-    "Ж": "J",
-    "З": "Z",
-    "И": "I",
-    "Й": "II",
-    "К": "K",
-    "Л": "L",
-    "М": "M",
-    "Н": "N",
-    "О": "O",
-    "П": "P",
-    "Р": "R",
-    "С": "S",
-    "Т": "T",
-    "У": "U",
-    "Ф": "F",
-    "Х": "H",
-    "Ц": "C",
-    "Ч": "CH",
-    "Ш": "SH",
-    "Щ": "SHCH",
-    "Ъ": "IE",
-    "Ы": "Y",
-    "Ь": "NG",
-    "Э": "NE",
-    "Ю": "IU",
-    "Я": "IA"
-};
-
-const fromWRU = {
-    "a": "а",
-    "b": "б",
-    "v": "в",
-    "g": "г",
-    "d": "д",
-    "e": "е",
-    "io": "ё",
-    "j": "ж",
-    "z": "з",
-    "i": "и",
-    "ii": "й",
-    "k": "к",
-    "l": "л",
-    "m": "м",
-    "n": "н",
-    "o": "о",
-    "p": "п",
-    "r": "р",
-    "s": "с",
-    "t": "т",
-    "u": "у",
-    "f": "ф",
-    "h": "х",
-    "c": "ц",
-    "ch": "ч",
-    "sh": "ш",
-    "shch": "щ",
-    "ie": "ъ",
-    "y": "ы",
-    "ng": "ь",
-    "ne": "э",
-    "iu": "ю",
-    "ia": "я",
-
-    "A": "А",
-    "B": "Б",
-    "V": "В",
-    "G": "Г",
-    "D": "Д",
-    "E": "Е",
-    "IO": "Ё",
-    "J": "Ж",
-    "Z": "З",
-    "I": "И",
-    "II": "Й",
-    "K": "К",
-    "L": "Л",
-    "M": "М",
-    "N": "Н",
-    "O": "О",
-    "P": "П",
-    "R": "Р",
-    "S": "С",
-    "T": "Т",
-    "U": "У",
-    "F": "Ф",
-    "H": "Х",
-    "C": "Ц",
-    "CH": "Ч",
-    "SH": "Ш",
-    "SHCH": "Щ",
-    "IE": "Ъ",
-    "Y": "Ы",
-    "NG": "Ь",
-    "NE": "Э",
-    "IU": "Ю",
-    "IA": "Я"
-};
-
 
 // Listen for any kind of message. There are different kinds of messages.
 telegram.on('message', recieveMessage);
@@ -609,22 +398,21 @@ function recieveMessage(msg) {
 
     let inputText = getMessageString(msg);
 
-    let inputWRU = strToWru(inputText);
+    let inputWRU = WRU.strToWru(inputText);
 
     console.log(addTimeStampTo('You> ') + inputText);
 
     console.log('\tWRU> ' + inputWRU);
 
     setTimeout(function() {
+        // Wait on the promise:
+        bot.reply(user, message).then(function(outputWRU) {
+            let outpuText = WRU.WruToStr(outputWRU);
 
-        let outputWRU = riveBot.reply(userId, inputWRU);
+            console.log('Bot> ' + outpuText);
+            console.log('\tWRU> ' + outputWRU);
 
-        let outpuText = WruToStr(outputWRU);
-
-        console.log('Bot> ' + outpuText);
-        console.log('\tWRU> ' + outputWRU);
-
-        sendMessageToTelegram(msg, outpuText, 10);
-
+            sendMessageToTelegram(msg, outpuText, 10);
+        });
     }, 500);
 }
