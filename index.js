@@ -1,3 +1,15 @@
+const http = require('http');
+const port = process.env.PORT;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('StrexetBot\n');
+});
+
+server.listen(port);
+
+
 const TelegramBot = require('node-telegram-bot-api');
 const RiveScript = require("rivescript");
 const fs = require("fs");
