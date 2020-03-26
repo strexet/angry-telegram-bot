@@ -28,8 +28,6 @@ const punctuation = new RegExp(/[.,!;:]/g);
 const PleaseNoWRU = "PleaseNoWRU:";
 
 function loading_done(msg) {
-    console.log("Has finished loading brain!");
-
     // Now the replies must be sorted!
     riveBot.sortReplies();
 
@@ -431,5 +429,20 @@ function recieveMessage(msg) {
 
     riveBot.loadDirectory("brain")
         .then(function() { loading_done(msg); })
+        .catch(loading_error);
+}
+
+const BeginRive = "brain/begin.rive";
+const NewDialogsRive = "brain/newDialogs.rive";
+const NewRespsRive = "brain/newResps.rive";
+const NewSubsRive = "brain/newSubs.rive";
+const NewStarRive = "brain/star.rive";
+
+function loadBrains(msg) {
+    riveBot.loadFile([BeginRive, NewDialogsRive, NewRespsRive, NewSubsRive, NewStarRive])
+        .then(function() {
+            console.log("Has finished loading ./brain!");
+            loading_done(msg)
+        })
         .catch(loading_error);
 }
