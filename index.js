@@ -431,7 +431,7 @@ function recieveMessage(msg) {
         return;
     }
 
-    riveBot.loadDirectory("brain/")
+    riveBot.loadDirectory("brain")
         .then(function() { loading_done(msg); })
         .catch(loading_error);
 }
