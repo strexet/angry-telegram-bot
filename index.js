@@ -8,9 +8,9 @@ const PrivateData = require("./Private/PrivateData.js");
 const token = PrivateData.token;
 
 // Create a telegram that uses 'polling' to fetch new updates
-const telegram = new TelegramBot(token, {polling: true});
+const telegram = new TelegramBot(token, { polling: true });
 
-const riveBot = new RiveScript({utf8: true});
+const riveBot = new RiveScript({ utf8: true });
 const punctuation = new RegExp(/[.,!;:]/g);
 
 const PleaseNoWRU = "PleaseNoWRU:";
@@ -161,8 +161,8 @@ telegram.onText(command_add, msg => {
         reply_markup: JSON.stringify({
             inline_keyboard: [
                 // [{ text: 'Диалог', callback_data: text_dialog }],
-                [{text: 'Отклик бота на твою реплику', callback_data: text_response}],
-                [{text: 'Новое для бота значение слова', callback_data: text_meaning}]
+                [{ text: 'Отклик бота на твою реплику', callback_data: text_response }],
+                [{ text: 'Новое для бота значение слова', callback_data: text_meaning }]
             ]
         })
     };
@@ -221,7 +221,7 @@ function processMeaning(msg) {
     let newSub = '\n// ' + wordForMeaning + ' = ' + meaning + '\n' +
         '! sub ' + WRU.strToWru(wordForMeaning) + ' = ' + WRU.strToWru(meaning) + '\n';
 
-    fs.appendFileSync("brain/newSubs.rive", newSub, "UTF-8", {'flags': 'a'});
+    fs.appendFileSync("brain/newSubs.rive", newSub, "UTF-8", { 'flags': 'a' });
 
     const resp = 'Значение добавлено!';
 
@@ -245,7 +245,7 @@ function processAnswer(msg) {
         '+ ' + replaceSpacesWithOptionalStars(WRU.strToWru(questionToAnswer)) + '\n' +
         '- ' + answer + '\n';
 
-    fs.appendFileSync("brain/newResps.rive", newResp, "UTF-8", {'flags': 'a'});
+    fs.appendFileSync("brain/newResps.rive", newResp, "UTF-8", { 'flags': 'a' });
 
     sendMessageToTelegram(msg, resp);
 }
@@ -267,7 +267,7 @@ function processDialog(msg) {
 
     console.log(newDialog);
 
-    fs.appendFileSync("brain/newDialogs.rive", newDialog, "UTF-8", {'flags': 'a'});
+    fs.appendFileSync("brain/newDialogs.rive", newDialog, "UTF-8", { 'flags': 'a' });
 
     const resp = 'Диалог добавлен!';
 
@@ -404,16 +404,15 @@ function recieveMessage(msg) {
 
     console.log('\tWRU> ' + inputWRU);
 
-    setTimeout(function () {
+    setTimeout(function() {
+        // Wait on the promise:
+        bot.reply(user, message).then(function(outputWRU) {
+            let outpuText = WRU.WruToStr(outputWRU);
 
-        let outputWRU = riveBot.reply(userId, inputWRU);
+            console.log('Bot> ' + outpuText);
+            console.log('\tWRU> ' + outputWRU);
 
-        let outpuText = WRU.WruToStr(outputWRU);
-
-        console.log('Bot> ' + outpuText);
-        console.log('\tWRU> ' + outputWRU);
-
-        sendMessageToTelegram(msg, outpuText, 10);
-
+            sendMessageToTelegram(msg, outpuText, 10);
+        });
     }, 500);
 }
