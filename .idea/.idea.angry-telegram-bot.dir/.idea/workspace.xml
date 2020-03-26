@@ -24,8 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Tools/WRU.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/WRU.js" afterDir="false" />
+    <list default="true" id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="More fixes.....">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +52,9 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Tools/telegram.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Tools/WRU.js" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -102,8 +103,16 @@
       <workItem from="1584514426351" duration="142000" />
       <workItem from="1584529391931" duration="1355000" />
       <workItem from="1585210712072" duration="113000" />
-      <workItem from="1585218203775" duration="395000" />
+      <workItem from="1585218203775" duration="903000" />
     </task>
+    <task id="LOCAL-00001" summary="More fixes.....">
+      <created>1585218654948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585218654948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +132,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="More fixes....." />
+    <option name="LAST_COMMIT_MESSAGE" value="More fixes....." />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584529497077">

@@ -38,19 +38,19 @@ function loading_done(msg) {
 
 function sendResponse(msg) {
     const chatId = getChatId(msg);
-    const userId = 'user_' + chatId;
+    const user = 'user_' + chatId;
 
     let inputText = getMessageString(msg);
 
     let inputWRU = WRU.strToWru(inputText);
 
-    console.log(addTimeStampTo('You(' + userId + ')> ') + inputText);
+    console.log(addTimeStampTo('You(' + user + ')> ') + inputText);
 
     console.log('\tWRU> ' + inputWRU);
 
     setTimeout(function() {
         // Wait on the promise:
-        riveBot.reply(user, message).then(function(outputWRU) {
+        riveBot.reply(user, msg).then(function(outputWRU) {
             let outpuText = WRU.WruToStr(outputWRU);
 
             console.log('Bot> ' + outpuText);
