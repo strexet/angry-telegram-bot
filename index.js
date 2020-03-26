@@ -29,14 +29,14 @@ const PleaseNoWRU = "PleaseNoWRU:";
 
 riveBot.loadDirectory("brain", loading_done, loading_error);
 
-function loading_done(batch_num) {
-    console.log("Batch #" + batch_num + " has finished loading!");
+function loading_done() {
+    console.log("Has finished loading brain!");
     // Now the replies must be sorted!
     riveBot.sortReplies();
 }
 
-function loading_error(error) {
-    console.log("Error when loading files: " + error);
+function loading_error(err, filename, lineno) {
+    console.log("Error when loading files: " + err + ". Filename: " + filename + ". Line number: " + lineno);
 }
 
 
@@ -403,7 +403,9 @@ function recieveMessage(msg) {
         return;
     }
 
-    riveBot.loadFile(["brain/newDialogs.rive", "brain/newResps.rive", "brain/newSubs.rive"], loading_done, loading_error);
+    riveBot.loadDirectory(["brain/newDialogs.rive", "brain/newResps.rive", "brain/newSubs.rive"])
+        .then(loading_done)
+        .catch(loading_error);
 
     const chatId = getChatId(msg);
     const userId = 'user_' + chatId;
@@ -418,7 +420,7 @@ function recieveMessage(msg) {
 
     setTimeout(function() {
         // Wait on the promise:
-        bot.reply(user, message).then(function(outputWRU) {
+        riveBot.reply(user, message).then(function(outputWRU) {
             let outpuText = WRU.WruToStr(outputWRU);
 
             console.log('Bot> ' + outpuText);
