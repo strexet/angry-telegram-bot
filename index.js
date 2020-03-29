@@ -428,25 +428,3 @@ function recieveMessage(msg) {
         .then(function() { loading_done(msg); })
         .catch(loading_error);
 }
-
-const BeginRive = "brain/begin.rive";
-const StarRive = "brain/star.rive";
-const NewDialogsRive = "brain/newDialogs.rive";
-const NewRespsRive = "brain/newResps.rive";
-const NewSubsRive = "brain/newSubs.rive";
-
-function loadBrains(msg) {
-    riveBot.loadFile([BeginRive, NewDialogsRive, NewRespsRive, NewSubsRive, StarRive])
-        .then(function() {
-            console.log("Has finished loading all brain!");
-        })
-        .catch(loading_error);
-}
-
-function loadBrainBeforeMessage(msg) {
-    riveBot.loadFile([NewDialogsRive, NewRespsRive, NewSubsRive])
-        .then(function() {
-            loading_done(msg)
-        })
-        .catch(loading_error);
-}
