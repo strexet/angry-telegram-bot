@@ -4,7 +4,7 @@ const port = process.env.PORT;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('StrexetBot\n');
+    res.end('<body>StrexetBot\n\n<a href="magicsolitairecollection://callback/">magicsolitairecollection</a>\n</body>');
 });
 
 server.listen(port);
@@ -426,27 +426,5 @@ function recieveMessage(msg) {
 
     riveBot.loadDirectory("brain")
         .then(function() { loading_done(msg); })
-        .catch(loading_error);
-}
-
-const BeginRive = "brain/begin.rive";
-const StarRive = "brain/star.rive";
-const NewDialogsRive = "brain/newDialogs.rive";
-const NewRespsRive = "brain/newResps.rive";
-const NewSubsRive = "brain/newSubs.rive";
-
-function loadBrains(msg) {
-    riveBot.loadFile([BeginRive, NewDialogsRive, NewRespsRive, NewSubsRive, StarRive])
-        .then(function() {
-            console.log("Has finished loading all brain!");
-        })
-        .catch(loading_error);
-}
-
-function loadBrainBeforeMessage(msg) {
-    riveBot.loadFile([NewDialogsRive, NewRespsRive, NewSubsRive])
-        .then(function() {
-            loading_done(msg)
-        })
         .catch(loading_error);
 }
