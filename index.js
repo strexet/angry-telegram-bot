@@ -3,7 +3,7 @@ const port = process.env.PORT;
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'text/html');
     res.end('<body>StrexetBot\n\n<a href="magicsolitairecollection://callback/">magicsolitairecollection</a>\n</body>');
 });
 
