@@ -9,6 +9,10 @@ const server = http.createServer((req, res) => {
 
 server.listen(port);
 
+setInterval(function() {
+    http.get("http://angry-telegram-bot.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
+
 
 const TelegramBot = require('node-telegram-bot-api');
 const RiveScript = require("rivescript");
