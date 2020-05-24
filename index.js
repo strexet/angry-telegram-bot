@@ -1,3 +1,19 @@
+const http = require('http');
+const port = process.env.PORT;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<body>StrexetBot\n\n<a href="magicsolitairecollection://callback/">magicsolitairecollection</a>\n</body>');
+});
+
+server.listen(port);
+
+setInterval(function() {
+    http.get("http://angry-telegram-bot.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
+
+
 const TelegramBot = require('node-telegram-bot-api');
 const RiveScript = require("rivescript");
 const fs = require("fs");
@@ -15,16 +31,37 @@ const punctuation = new RegExp(/[.,!;:]/g);
 
 const PleaseNoWRU = "PleaseNoWRU:";
 
-riveBot.loadDirectory("brain", loading_done, loading_error);
-
-function loading_done(batch_num) {
-    console.log("Batch #" + batch_num + " has finished loading!");
+function loading_done(msg) {
     // Now the replies must be sorted!
     riveBot.sortReplies();
+
+    sendResponse(msg);
 }
 
-function loading_error(error) {
-    console.log("Error when loading files: " + error);
+function sendResponse(msg) {
+    const chatId = getChatId(msg);
+    const user = 'user_' + chatId;
+
+    let inputText = getMessageString(msg);
+
+    let inputWRU = WRU.strToWru(inputText);
+
+    console.log(addTimeStampTo('You(' + user + ')> ') + inputText);
+
+    setTimeout(function() {
+        // Wait on the promise:
+        riveBot.reply(user, inputWRU).then(function(outputWRU) {
+            let outpuText = WRU.WruToStr(outputWRU);
+
+            console.log('Bot> ' + outpuText);
+
+            sendMessageToTelegram(msg, outpuText, 10);
+        });
+    }, 500);
+}
+
+function loading_error(err, filename, lineno) {
+    console.log("Error when loading files: " + err + ". Filename: " + filename + ". Line number: " + lineno);
 }
 
 
@@ -391,28 +428,7 @@ function recieveMessage(msg) {
         return;
     }
 
-    riveBot.loadFile(["brain/newDialogs.rive", "brain/newResps.rive", "brain/newSubs.rive"], loading_done, loading_error);
-
-    const chatId = getChatId(msg);
-    const userId = 'user_' + chatId;
-
-    let inputText = getMessageString(msg);
-
-    let inputWRU = WRU.strToWru(inputText);
-
-    console.log(addTimeStampTo('You> ') + inputText);
-
-    console.log('\tWRU> ' + inputWRU);
-
-    setTimeout(function() {
-        // Wait on the promise:
-        bot.reply(user, message).then(function(outputWRU) {
-            let outpuText = WRU.WruToStr(outputWRU);
-
-            console.log('Bot> ' + outpuText);
-            console.log('\tWRU> ' + outputWRU);
-
-            sendMessageToTelegram(msg, outpuText, 10);
-        });
-    }, 500);
+    riveBot.loadDirectory("brain")
+        .then(function() { loading_done(msg); })
+        .catch(loading_error);
 }

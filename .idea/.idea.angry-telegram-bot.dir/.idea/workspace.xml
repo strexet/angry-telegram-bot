@@ -24,10 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.angry-telegram-bot.dir/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6964164e-1cce-49e0-aea3-c7f179ba8cc2" name="Default Changelist" comment="Removed unnecessary logs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,9 +49,10 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Tools/telegram.js" />
-        <option value="$PROJECT_DIR$/Tools/WRU.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Tools/WRU.js" />
+        <option value="$PROJECT_DIR$/brain/newResps.rive" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -79,6 +77,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -103,7 +107,44 @@
       <workItem from="1584514426351" duration="142000" />
       <workItem from="1584529391931" duration="1355000" />
       <workItem from="1585210712072" duration="113000" />
+      <workItem from="1585218203775" duration="2752000" />
     </task>
+    <task id="LOCAL-00001" summary="More fixes.....">
+      <created>1585218654948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585218654948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="more more fixes">
+      <created>1585219136424</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585219136424</updated>
+    </task>
+    <task id="LOCAL-00003" summary="more more fixes...">
+      <created>1585220430487</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585220430487</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Huge fix!">
+      <created>1585220589534</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585220589534</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Removed unnecessary logs">
+      <created>1585220893151</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585220893151</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +164,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="More fixes....." />
+    <MESSAGE value="more more fixes" />
+    <MESSAGE value="more more fixes..." />
+    <MESSAGE value="Huge fix!" />
+    <MESSAGE value="Removed unnecessary logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary logs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584529497077">
@@ -153,5 +202,9 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="608" y="149" key="RollbackChangesDialog/0.0.1600.870@0.0.1600.870" timestamp="1585210824069" />
+    <state x="480" y="191" width="640" height="488" key="find.popup" timestamp="1585220528295">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="480" y="191" width="640" height="488" key="find.popup/0.0.1600.870@0.0.1600.870" timestamp="1585220528295" />
   </component>
 </project>
