@@ -6,3 +6,4 @@ RiveScript telegram bot, with russian language.
 To make it work paste your telegram token to token variable at index.js
 
 By the way, bot is very angry!
+Beware!
